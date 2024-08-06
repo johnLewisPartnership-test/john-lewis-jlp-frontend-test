@@ -1,0 +1,272 @@
+@import "../../styles/shared-vars";
+
+.back {
+    background: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="iso-8859-1"%3F><svg fill="%233B3B3B" height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.006 512.006" xml:space="preserve"><g><g><path d="M388.419,475.59L168.834,256.005L388.418,36.421c8.341-8.341,8.341-21.824,0-30.165s-21.824-8.341-30.165,0L123.586,240.923c-8.341,8.341-8.341,21.824,0,30.165l234.667,234.667c4.16,4.16,9.621,6.251,15.083,6.251c5.461,0,10.923-2.091,15.083-6.251C396.76,497.414,396.76,483.931,388.419,475.59z"/></g></g></svg>');
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 0;
+    display: inline-block;
+    height: 25px;
+    margin: 1.2rem 0.4rem 0.4rem 0.4rem;
+    width: 25px;
+
+    &:focus {
+        outline: 1;
+    }
+
+    &:hover {
+        outline: 1px solid $stormDust;
+    }
+}
+
+.backHidden {
+    @include visually-hidden;
+}
+
+.header {
+    background: $white;
+    border-bottom: 1px solid $white;
+    height: 4rem;
+
+    @media screen and (min-width: $media-m-breakpoint) {
+        background: $alabaster;
+        border-bottom: 1px solid $stormDustBorder;
+    }
+
+    h1 {
+        color: $doveGray;
+        flex: 1;
+        font-size: 1rem;
+        margin: 0;
+        padding-top: 0.5rem;
+
+        @media screen and (min-width: $media-m-breakpoint) {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.headerInnerWrapper {
+    align-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1000px;
+
+    @media screen and (min-width: $media-m-breakpoint) {
+        align-items: center;
+    }
+}
+
+.link {
+    background: $white;
+    color: inherit;
+    display: block;
+    text-decoration: none;
+
+    &:focus {
+        outline: 1;
+    }
+
+    &:hover {
+        outline: 1px solid $grey;
+
+        h2 {
+            text-decoration: underline;
+        }
+    }
+}
+
+.mainWrapper {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.productContentWrapper {
+    align-content: space-around;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+
+    @media screen and (min-width: $media-m-breakpoint) {
+        width: 64.1%; // TODO resolve magic number, introduce scss grid
+    }
+}
+
+.productDescription {
+    margin-bottom: 0rem;
+    order: 2;
+
+    @media screen and (min-width: $media-m-breakpoint) {
+        margin-bottom: 2rem;
+        order: 3;
+    }
+}
+
+.productDescriptionHide {
+    p {
+        display: none;
+    }
+
+    p:nth-of-type(1) {
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 5;
+        display: -webkit-box;
+        overflow: hidden;
+    }
+}
+
+.productDescriptionShow {
+    p {
+        -webkit-box-orient: unset;
+        -webkit-line-clamp: unset;
+        display: block;
+        overflow: visible;
+    }
+}
+
+.productDetail {
+    display: -webkit-box;
+    line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.productInfo {
+    align-content: flex-start;
+    align-items: flex-start;
+    border-right: 1px solid $stormDustBorder;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: 1rem 2rem;
+    padding-left: 3rem;
+    padding-top: 0rem;
+    width: 100%;
+
+    h3 {
+        color: $doveGray;
+        font-size: 1.75rem;
+        margin-bottom: 1.3rem;
+        order: 1;
+
+        @media screen and (min-width: $media-m-breakpoint) {
+            order: 1;
+        }
+    }
+
+    h4 {
+        color: $doveGray;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        order: 3;
+
+        @media screen and (min-width: $media-m-breakpoint) {
+            // TODO The order of the Product Code changes order as it moves from desktop to mobile on the Designs. This creates an a11y issue as the reading order does not match the visuals. Recommend alter design to keep consistent.
+            margin-bottom: 0.4rem;
+            order: 2;
+        }
+    }
+
+    b {
+        font-weight: 300;
+    }
+
+    p {
+        color: $doveGray;
+        font-size: 1.1rem;
+        font-weight: 400;
+    }
+}
+
+.productSpecList {
+    border-bottom: 1px solid $stormDustBorder;
+    color: $doveGray;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 1rem 1rem 1rem 0;
+    width: 100%;
+
+    &:first-child {
+        border-top: 1px solid $stormDustBorder;
+    }
+}
+
+.productSpecList__left {
+    flex: 1;
+    text-align: left;
+}
+
+.productSpecList__right {
+    flex: 1;
+    font-weight: 300;
+    text-align: right;
+}
+
+.productSpecListWrapper {
+    border-right: 1px solid $stormDustBorder;
+    box-sizing: border-box;
+    padding: 0 3rem;
+    width: 100%;
+
+    h4 {
+        color: $doveGray;
+        font-size: 1.75rem;
+        font-weight: 300;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.readMoreButton {
+    display: none;
+    // TODO Read more button does not exist on mobile Designs, recommend to restore to keep consistant.
+
+    @media screen and (min-width: $media-m-breakpoint) {
+        background: $white;
+        border: 0;
+        border-bottom: 1px solid $stormDustBorder;
+        border-top: 1px solid $stormDustBorder;
+        color: $black;
+        display: block;
+        font-family: $GillSansforJL;
+        font-size: 1.4rem;
+        font-weight: 400;
+        margin: 0;
+        margin-bottom: 1.8rem;
+        order: 4;
+        padding: 1rem 0;
+        text-align: left;
+        width: 100%;
+    }
+
+    &:focus {
+        outline: 1;
+    }
+
+    &:hover {
+        outline: 1px solid $stormDust;
+    }
+}
+
+.readMoreButtonArrow {
+    background: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="iso-8859-1"%3F><svg fill="%233B3B3B" height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.006 512.006" xml:space="preserve" transform="scale(-1,1)"><g><g><path d="M388.419,475.59L168.834,256.005L388.418,36.421c8.341-8.341,8.341-21.824,0-30.165s-21.824-8.341-30.165,0L123.586,240.923c-8.341,8.341-8.341,21.824,0,30.165l234.667,234.667c4.16,4.16,9.621,6.251,15.083,6.251c5.461,0,10.923-2.091,15.083-6.251C396.76,497.414,396.76,483.931,388.419,475.59z"/></g></g></svg>');
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 0;
+    float: right;
+    height: 25px;
+    margin-right: 1.4rem;
+    width: 25px;
+}

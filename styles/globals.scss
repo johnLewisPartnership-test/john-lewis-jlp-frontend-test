@@ -1,0 +1,102 @@
+@import "shared-vars";
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: $GillSansforJL;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    color: $stormDust;
+    margin-top: 0;
+    font-size: 22px;
+    font-weight: 200;
+    line-height: 30px;
+    text-align: center;
+    @media only screen and (min-width: $media-m-breakpoint) {
+        font-size: 30px;
+        line-height: 38px;
+    }
+}
+
+h2 {
+    color: $codGray;
+    margin-top: 0;
+    font-size: 22px;
+    font-weight: 200;
+    line-height: 30px;
+    letter-spacing: initial;
+    text-transform: none;
+}
+
+h3 {
+    color: $codGray;
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 20px;
+}
+
+h4 {
+    color: $codGray;
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 20px;
+}
+
+h5 {
+    color: $codGray;
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 20px;
+}
+
+h6 {
+    color: $codGray;
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 20px;
+}
+
+p {
+    color: $codGray;
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: normal;
+    line-height: 20px;
+}
+
+@font-face {
+    font-family: $GillSansforJL;
+    src: url("https://www.johnlewis.com/static/core/fonts/GillSansNovaforJLW01Lt.eot");
+    src: url("https://www.johnlewis.com/static/core/fonts/GillSansNovaforJLW01Lt.eot?#iefix") format("embedded-opentype"),
+        url("https://www.johnlewis.com/static/core/fonts/GillSansNovaforJLW01Lt.woff2") format("woff2"), url("https://www.johnlewis.com/static/core/fonts/GillSansNovaforJLW01Lt.woff") format("woff"),
+        url("https://www.johnlewis.com/static/core/fonts/GillSansNovaforJLW01Lt.ttf") format("truetype"),
+        url("https://www.johnlewis.com/static/core/fonts/GillSansNovaforJLW01Lt.svg#jlicons") format("svg");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: $GillSansforJL;
+    src: url("https://www.johnlewis.com/static/core/fonts/GillSansNovaforJLW01Md.eot");
+    src: url("https://www.johnlewis.com/static/core/fonts/GillSansNovaforJLW01Md.eot?#iefix") format("embedded-opentype"),
+        url("https://www.johnlewis.com/static/core/fonts/GillSansNovaforJLW01Md.woff2") format("woff2"), url("https://www.johnlewis.com/static/core/fonts/GillSansNovaforJLW01Md.woff") format("woff"),
+        url("https://www.johnlewis.com/static/core/fonts/GillSansNovaforJLW01Md.ttf") format("truetype"),
+        url("https://www.johnlewis.com/static/core/fonts/GillSansNovaforJLW01Md.svg#jlicons") format("svg");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}

@@ -1,0 +1,15 @@
+@import "../../styles/shared-vars";
+
+.content {
+    display: grid;
+    gap: 0;
+    background-color: $white;
+}
+
+.navbar {
+    display: inherit;
+}
+
+.footer {
+    display: inherit;
+}
